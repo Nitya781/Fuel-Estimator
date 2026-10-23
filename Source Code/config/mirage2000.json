@@ -1,0 +1,42 @@
+{
+    "aircraft": {
+        "name": "Mirage 2000",
+        "manufacturer": "Dassault Aviation",
+        "engine": "SNECMA M53-P2",
+        "engine_count": 1
+    },
+
+    "fuel": {
+        "capacity_kg": 3165.0,
+        "initial_fuel_level_fraction": 0.80,
+        "initial_fuel_kg": 2532.0,
+        "reserve_fuel_kg": 500.0,
+        "bingo_margin_kg": 300.0,
+        "density_kg_per_litre": 0.805,
+        "density_lbs_per_gallon": 6.72
+    },
+
+    "engine": {
+        "dry_sfc": 0.90,
+        "afterburner_sfc": 2.10,
+        "max_dry_thrust_lbf": 14300,
+        "max_afterburner_thrust_lbf": 21200
+    },
+
+    "atmosphere": {
+        "sea_level_temperature_K": 288.15,
+        "sea_level_pressure_Pa": 101325,
+        "sea_level_density_kg_per_m3": 1.225,
+        "temperature_lapse_rate_K_per_m": 0.0065
+    },
+
+    "mission": {
+        "holding_time_hr": 0.50,
+        "divert_time_hr": 0.25
+    },
+
+    "simulation": {
+        "update_rate_hz": 20,
+        "time_step_sec": 0.05
+    }
+}

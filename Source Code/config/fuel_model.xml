@@ -1,0 +1,142 @@
+<PropertyList>
+
+<comment>
+<![CDATA[
+Usage:
+Recording:
+fgfs --generic=file,out,20,flight.out,playback
+
+Playback:
+fgfs --generic=file,in,20,flight.out,playback --fdm=null
+]]>
+</comment>
+
+<generic>
+
+<output>
+
+<line_separator>newline</line_separator>
+<var_separator>,</var_separator>
+
+
+<!-- 1 Time -->
+<chunk>
+<name>Time</name>
+<type>double</type>
+<node>/sim/time/elapsed-sec</node>
+</chunk>
+
+
+<!-- 2 Latitude -->
+<chunk>
+<name>Latitude</name>
+<type>double</type>
+<format>%.10lf</format>
+<node>/position/latitude-deg</node>
+</chunk>
+
+
+<!-- 3 Longitude -->
+<chunk>
+<name>Longitude</name>
+<type>double</type>
+<format>%.10lf</format>
+<node>/position/longitude-deg</node>
+</chunk>
+
+
+<!-- 4 Altitude -->
+<chunk>
+<name>Altitude</name>
+<type>float</type>
+<format>%f</format>
+<node>/position/altitude-ft</node>
+</chunk>
+
+
+<!-- 5 Heading -->
+<chunk>
+<name>Heading</name>
+<type>float</type>
+<format>%.5f</format>
+<node>/orientation/heading-deg</node>
+</chunk>
+
+
+<!-- 6 Mach -->
+<chunk>
+<name>Mach</name>
+<type>float</type>
+<format>%f</format>
+<node>/velocities/mach</node>
+</chunk>
+
+
+<!-- 7 True Airspeed -->
+<chunk>
+<name>TAS</name>
+<type>float</type>
+<format>%f</format>
+<node>/velocities/true-airspeed-kt</node>
+</chunk>
+
+
+<!-- 8 Temperature -->
+<chunk>
+<name>Temperature</name>
+<type>float</type>
+<format>%f</format>
+<node>/environment/temperature-degf</node>
+</chunk>
+
+
+<!-- 9 Throttle -->
+<chunk>
+<name>Throttle</name>
+<type>float</type>
+<format>%f</format>
+<node>/controls/engines/engine[0]/throttle</node>
+</chunk>
+
+
+<!-- 10 Afterburner -->
+<chunk>
+<name>Afterburner</name>
+<type>float</type>
+<format>%f</format>
+<node>/engines/engine[0]/afterburner</node>
+</chunk>
+
+
+<!-- 11 Thrust -->
+<chunk>
+<name>Thrust</name>
+<type>float</type>
+<format>%.2f</format>
+<node>/engines/engine[0]/thrust-lbs</node>
+</chunk>
+
+
+<!-- 12 Fuel -->
+<chunk>
+<name>Fuel</name>
+<type>float</type>
+<format>%.2f</format>
+<node>/consumables/fuel/total-fuel-kg</node>
+</chunk>
+
+
+<!-- 13 Distance to Waypoint -->
+<chunk>
+<name>Distance</name>
+<type>double</type>
+<format>%.10lf</format>
+<node>/instrumentation/gps/wp/leg-distance-nm</node>
+</chunk>
+
+
+</output>
+
+</generic>
+
+</PropertyList>
